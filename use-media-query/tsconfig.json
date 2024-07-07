@@ -1,18 +1,16 @@
 {
-  "CompilerOptions": {
+  "compilerOptions": {
     "target": "es6",
     "lib": ["esnext", "DOM"],
     "module": "ESNext",
     "outDir": "./dist",
     "baseUrl": "./src",
     "rootDir": "./src",
-    "composite": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
     "allowJs": true,

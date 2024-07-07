@@ -6,7 +6,7 @@ interface HookArgs {
 
 type HandlerType = (ev: MediaQueryListEvent) => void;
 
-const useMediaQuery = ({ query }: HookArgs): boolean => {
+export const useMediaQuery = ({ query }: HookArgs): boolean => {
   const [matchValue, setMatchValue] = useState(false);
 
   useEffect(() => {
@@ -25,5 +25,3 @@ const useMediaQuery = ({ query }: HookArgs): boolean => {
 
   return matchValue;
 };
-
-export default useMediaQuery;
