@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@lokixio/use-media-query';
+import { useMediaQuery } from '@lokixio/react-responsive';
 
 function HookExample() {
   const isDesktopOrLaptop = useMediaQuery({

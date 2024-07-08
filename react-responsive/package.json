@@ -1,5 +1,5 @@
 {
-  "name": "@lokixio/use-media-query",
+  "name": "@lokixio/react-responsive",
   "version": "1.0.0",
   "description": "Хук для работы с media query",
   "type": "module",
