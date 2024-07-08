@@ -24,4 +24,5 @@ yarn
 yarn dev
 ```
 
-### [Пример использования](./example/src/App.tsx)
+### [Пример использования хука](./example/src/HookExample.tsx)
+### [Пример использования компонента](./example/src/MediaQueryExample.tsx)
