@@ -1,1 +1,4 @@
-export { useMediaQuery } from 'useMediaQuery';
+import MediaQuery from './MediaQuery';
+
+export default MediaQuery;
+export { useMediaQuery } from './useMediaQuery';
