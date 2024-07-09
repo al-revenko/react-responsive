@@ -1,18 +1,21 @@
 import { useMediaQuery } from 'useMediaQuery';
-import { ReactElement, ReactNode } from 'react';
+import { ReactNode } from 'react';
+
+type NumberDPPX = number | `${number}dppx`;
+type NumberPX = number | `${number}px`;
 
 interface Media {
   orientation: 'landscape' | 'portrait';
-  minResolution: number | `${number}dppx`;
-  maxResolution: number | `${number}dppx`;
-  minWidth: number | `${number}px`;
-  maxWidth: number | `${number}px`;
-  minHeight: number | `${number}px`;
-  maxHeight: number | `${number}px`;
+  minResolution: NumberDPPX;
+  maxResolution: NumberDPPX;
+  minWidth: NumberPX;
+  maxWidth: NumberPX;
+  minHeight: NumberPX;
+  maxHeight: NumberPX;
 }
 
 interface Props extends Partial<Media> {
-  children: ReactNode | ((match: boolean) => ReactElement);
+  children: ReactNode | ((match: boolean) => ReactNode);
 }
 
 const createQuery = (param: string, value?: string | number, unit: 'px' | 'dppx' | '' = 'px'): string => {
