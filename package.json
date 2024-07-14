@@ -1,0 +1,41 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "description": "lokix's monorepo",
+  "main": "index.js",
+  "workspaces": [
+    "./*"
+  ],
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others \"yarn watch:hook\" \"yarn dev:server\"",
+    "dev:server": "yarn workspace example dev",
+    "watch:hook": "yarn workspace @lokixio/react-responsive watch",
+    "build": "yarn workspace @lokixio/react-responsive build",
+    "fix": "yarn fix:eslint & yarn fix:prettier",
+    "lint:prettier": "prettier --check .",
+    "fix:prettier": "prettier --write .",
+    "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx .",
+    "fix:eslint": "eslint --ext .ts,.tsx,.js,.jsx . --fix"
+  },
+  "keywords": [],
+  "author": "Alexander Revenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "@web-bee-ru/eslint-plugin": "^0.6.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "eslint-plugin-unicorn": "^54.0.0",
+    "prettier": "^2.3.2"
+  }
+}
